@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { DefaultAvatar } from '../../shared/components/default-avatar/default-avatar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [DefaultAvatar, CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
