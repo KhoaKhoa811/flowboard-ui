@@ -1,0 +1,53 @@
+.header-container {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    height: 56px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229, 231, 235);
+    padding-inline: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        .logo {
+            width: 28px;
+            height: 28px;
+        }
+
+        .app-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: rgb(31, 41, 55);
+        }
+    }
+
+    .user-information-section {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .notification-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            object-fit: cover;
+        }
+    }
+}
