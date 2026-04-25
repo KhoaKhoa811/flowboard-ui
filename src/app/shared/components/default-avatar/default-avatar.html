@@ -2,8 +2,7 @@
     [ngStyle]="{ 
         'background-color': avatarColor, 
         'width.px': size, 
-        'height.px': size, 
-        'font-size.px': fontSize }"
+        'height.px': size }"
 >
-    <span class="avatar-text">{{ initials }}</span>
+    <span class="avatar-text" [ngStyle]="{ 'font-size.px': fontSize }">{{ initials }}</span>
 </div>

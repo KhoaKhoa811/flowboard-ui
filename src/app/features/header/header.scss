@@ -31,11 +31,17 @@
     .user-information-section {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 24px;
 
         .notification-icon {
             width: 28px;
             height: 28px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .user-name {
@@ -43,11 +49,10 @@
             font-weight: 500;
         }
 
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 9999px;
-            object-fit: cover;
+        .dropdown-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 12px;
         }
     }
 }
