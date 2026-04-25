@@ -6,4 +6,6 @@ html, body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%) fixed;
   color: #111827;
+  display: flex;
+  flex-direction: column;
 }
