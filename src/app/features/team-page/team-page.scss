@@ -1,0 +1,21 @@
+.team-page-container {
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 40px 32px;
+
+    .welcome-container {
+        margin-bottom: 36px;
+
+        .welcome-text {
+            font-size: 26px;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            margin-bottom: 4px;
+        }
+
+        .welcome-subtext {
+            color: rgb(107, 114, 128);
+            font-size: 14px;
+        }   
+    }
+}

@@ -1,0 +1,36 @@
+.stat-item-container {
+    background: rgb(255, 255, 255);
+    border-radius: 14px;
+    padding: 22px 24px;
+    border: 1.5px solid rgb(243, 244, 246);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 4px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    .stat-item-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .stat-item-count {
+        font-size: 30px;
+        font-weight: 700;
+        color: rgb(17, 24, 39);
+        line-height: 1;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .stat-item-type {
+        font-size: 13px;
+        color: rgb(156, 163, 175);
+        margin-top: 4px;
+    }
+}
