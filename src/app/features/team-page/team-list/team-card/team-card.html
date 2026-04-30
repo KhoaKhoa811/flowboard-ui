@@ -1,0 +1,35 @@
+<div class="team-card-container">
+    <div class="team-card-color" [ngStyle]="{ 'background-color': teamName | nameColor }"></div>
+
+    <div class="team-card-header-container">
+        <div class="team-card-header">
+            <h3>{{ teamName }}</h3>
+            <span>{{ teamDescription }}</span>
+        </div>
+        <div class="team-card-information">
+            <div class="team-card-owner">Owner</div>
+
+            <button class="team-card-shared">
+                <mat-icon>share</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="team-card-member-container">
+        <div class="team-card-member">
+            <app-default-avatar [name]="'Mark S'" [size]="24" [fontSize]="10"></app-default-avatar>
+            <app-default-avatar [name]="'John Doe'" [size]="24" [fontSize]="10"></app-default-avatar>
+            <app-default-avatar [name]="'Jane Smith'" [size]="24" [fontSize]="10"></app-default-avatar>
+            <app-default-avatar [name]="'Bob Johnson'" [size]="24" [fontSize]="10"></app-default-avatar>
+        </div>
+
+        <div class="team-card-task-done">
+            1/6 
+            <span>Done</span>
+        </div>
+    </div>
+
+    <div class="timeline-container">
+        <div class="timeline-progress" [style.width.%]="20"></div>
+    </div>
+</div>

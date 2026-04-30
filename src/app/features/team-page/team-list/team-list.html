@@ -1,0 +1,29 @@
+<div class="team-list-container">
+    <div class="team-list-header">
+        <h2>
+            Your Teams
+            <span class="team-count">· 8</span>
+        </h2>
+
+        <div class="search-filter-container">
+            <div class="search-container">
+                <mat-icon class="search-icon">search</mat-icon>
+                <input type="text" placeholder="Search teams..." class="search-input" />
+            </div>
+
+            <button class="add-button">
+                <mat-icon class="add-icon">add</mat-icon>
+                Create Team
+            </button>
+        </div>
+    </div>
+
+    <div class="team-list-grid">
+        <app-team-card [teamName]="'Product'" [teamDescription]="'Core product development and roadmap'"></app-team-card>
+        <app-team-card [teamName]="'Marketing Team'" [teamDescription]="'Campaign planning and brand strategy'"></app-team-card>
+        <app-team-card [teamName]="'Product'" [teamDescription]="'Core product development and roadmap'"></app-team-card>
+        <app-team-card [teamName]="'Marketing Team'" [teamDescription]="'Campaign planning and brand strategy'"></app-team-card>
+        <app-team-card [teamName]="'Product'" [teamDescription]="'Core product development and roadmap'"></app-team-card>
+        <app-team-card [teamName]="'Marketing Team'" [teamDescription]="'Campaign planning and brand strategy'"></app-team-card>
+    </div>
+</div>
