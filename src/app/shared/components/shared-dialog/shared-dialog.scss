@@ -1,0 +1,79 @@
+.shared-dialog-overlay {
+    position: fixed;
+    inset: 0px;
+    background: rgba(17, 24, 39, 0.45);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    padding: 24px;
+
+    .shared-dialog-container {
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 60px;
+        overflow: hidden;
+
+        .shared-dialog-header {
+            padding: 12px 24px;
+            border-bottom: 1px solid rgb(243, 244, 246);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .closed-button {
+                background: none;
+                border: medium;
+                cursor: pointer;
+                color: rgb(156, 163, 175);
+                
+                mat-icon {
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .shared-dialog-content {
+            padding: 16px 24px;
+        }
+
+        .shared-dialog-action {
+            padding: 16px 24px;
+            border-top: 1px solid rgb(243, 244, 246);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+
+            .cancel-button {
+                padding: 9px 20px;
+                border-radius: 9px;
+                border: 1.5px solid rgb(229, 231, 235);
+                background: rgb(255, 255, 255);
+                font-size: 13px;
+                font-weight: 500;
+                color: rgb(55, 65, 81);
+                cursor: pointer;
+            }
+
+            .confirm-button {
+                padding: 9px 20px;
+                border-radius: 9px;
+                background: rgb(99, 102, 241);
+                color: rgb(255, 255, 255);
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                border: medium;
+            }
+        }
+    }
+}

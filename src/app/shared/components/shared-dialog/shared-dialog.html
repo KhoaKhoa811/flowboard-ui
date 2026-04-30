@@ -1,0 +1,26 @@
+<div class="shared-dialog-overlay" 
+  *ngIf="toggle"
+  (click) = "toggleForm()"
+>
+  <div class="shared-dialog-container" 
+    (click)="$event.stopPropagation()"
+    [style.width]="dialogWidth"
+  >
+    <div class="shared-dialog-header">
+      <h2>{{title}}</h2>
+      
+      <button class="closed-button" (click) = "toggleForm()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="shared-dialog-content">
+      <ng-content></ng-content>
+    </div>
+
+    <div class="shared-dialog-action">
+      <button class="cancel-button">Cancel</button>
+      <button class="confirm-button">Confirm</button>
+    </div>
+  </div>
+</div>
