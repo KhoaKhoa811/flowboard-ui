@@ -11,12 +11,21 @@
                 <input type="text" placeholder="Search teams..." class="search-input" />
             </div>
 
-            <button class="add-button">
+            <button class="add-button" (click)="toggleCreateForm()">
                 <mat-icon class="add-icon">add</mat-icon>
                 Create Team
             </button>
         </div>
     </div>
+
+    <app-shared-dialog
+        [title]="'Create New Team'"
+        [(toggle)]="openFormToggle"
+        [submitName]="'Create team'"
+        (onCancel)="teamFormRef.resetForm()"
+    >
+        <app-create-team-form #teamFormRef></app-create-team-form>
+    </app-shared-dialog>
 
     <div class="team-list-grid">
         <app-team-card [teamName]="'Product'" [teamDescription]="'Core product development and roadmap'"></app-team-card>

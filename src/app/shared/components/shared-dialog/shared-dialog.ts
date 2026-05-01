@@ -13,12 +13,20 @@ export class SharedDialog {
   @Output() toggleChange = new EventEmitter<boolean>();
 
   @Input() title: string = "Dialog";
+  @Input() submitName: string = "Confirm";
 
   @Input() dialogWidth: string = "460px";
+
+  @Output() onCancel = new EventEmitter<void>();
   
   toggleForm() {
     this.toggle = !this.toggle;
 
     this.toggleChange.emit(this.toggle);
+  }
+
+  cancelForm() {
+    this.onCancel.emit();
+    this.toggleForm();
   }
 }

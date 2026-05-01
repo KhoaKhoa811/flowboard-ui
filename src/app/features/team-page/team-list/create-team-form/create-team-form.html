@@ -1,0 +1,24 @@
+<form [formGroup]="teamForm">
+
+    <div class="team-name-container">
+        <label>TEAM NAME *</label>
+        <input formControlName="teamName" type="text" placeholder="e. g. Design Team" class="form-control">
+        <small *ngIf="teamForm.get('teamName')?.invalid && teamForm.get('teamName')?.touched" class="text-danger">
+            Invalid team name
+        </small>
+    </div>
+
+    <div class="description-container">
+        <label>DESCRIPTION *</label>
+        <textarea 
+            formControlName="description" 
+            class="form-control" 
+            rows="3" 
+            placeholder="What does this team work on?">
+        </textarea>
+        <small *ngIf="teamForm.get('description')?.invalid && teamForm.get('description')?.touched" class="text-danger">
+            Invalid description
+        </small>
+    </div>
+
+</form>
