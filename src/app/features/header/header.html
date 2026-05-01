@@ -2,6 +2,18 @@
     <div class="logo-section">
         <img src="assets/logos/notion-icon.png" alt="Flowboard Logo" class="logo">
         <span class="app-name">Flowboard</span>
+
+        @if (headerService.headerMode() === 'team') {
+            <div class="team-detail-section">
+                <mat-icon>chevron_right</mat-icon>
+                <h2 class="team-title">Product Team</h2>
+                <button class="selected">Overview</button>
+                <button>Tasks</button>
+                <button>Board</button>
+                <button>Calendar</button>
+                <button>Discuss</button>
+            </div>
+        }
     </div>
 
     <div class="user-information-section">
