@@ -1,7 +1,7 @@
 <div class="header-container">
     <div class="logo-section">
-        <img src="assets/logos/notion-icon.png" alt="Flowboard Logo" class="logo">
-        <span class="app-name">Flowboard</span>
+        <img src="assets/logos/notion-icon.png" alt="Flowboard Logo" class="logo" (click)="goToHome()">
+        <span class="app-name" (click)="goToHome()">Flowboard</span>
 
         @if (headerService.headerMode() === 'team') {
             <div class="team-detail-section">

@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { DefaultAvatar } from '../../shared/components/default-avatar/default-avatar';
 import { CommonModule } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,4 +13,10 @@ import { RouterModule } from '@angular/router';
 })
 export class Header {
   public headerService = inject(HeaderLayoutService);
+  private router = inject(Router);
+
+  goToHome() {
+    this.headerService.setDefaultHeader();
+    this.router.navigate(['/']);
+  }
 }

@@ -31,7 +31,9 @@
         <app-team-card 
             [teamName]="'Product'" 
             [teamDescription]="'Core product development and roadmap'"
-            (click)="onViewTeamDetail('abczyx', 'Product')"></app-team-card>
+            [routerLink]="['/team-details', 'abczyx', 'overview']"
+            (click)="headerService.setTeamHeader('abczyx', 'Product')"
+        ></app-team-card>
         <app-team-card [teamName]="'Marketing Team'" [teamDescription]="'Campaign planning and brand strategy'"></app-team-card>
         <app-team-card [teamName]="'Product'" [teamDescription]="'Core product development and roadmap'"></app-team-card>
         <app-team-card [teamName]="'Marketing Team'" [teamDescription]="'Campaign planning and brand strategy'"></app-team-card>
