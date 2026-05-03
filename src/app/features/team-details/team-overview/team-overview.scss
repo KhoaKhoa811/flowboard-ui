@@ -1,0 +1,75 @@
+.team-overview-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0px auto;
+
+    .team-overview-header-container {
+        margin-bottom: 32px;
+
+        .team-overview-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .team-overview-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .team-color {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                }
+
+                .team-title {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+                .team-code {
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: rgb(156, 163, 175);
+                    background: rgb(243, 244, 246);
+                    border-radius: 6px;
+                    padding: 2px 8px;
+                    letter-spacing: 0.05em;
+                    font-family: monospace;
+                }
+            }
+
+            .shared-button {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                padding: 9px 18px;
+                border-radius: 10px;
+                border: 1.5px solid rgb(229, 231, 235);
+                background: rgb(255, 255, 255);
+                cursor: pointer;
+                font-size: 13px;
+                font-weight: 600;
+                color: rgb(55, 65, 81);
+
+                mat-icon {
+                    width: 15px;
+                    height: 15px;
+                    fill: none;
+                    stroke: currentcolor;
+                    stroke-width: 2px;
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .team-overview-description {
+            color: rgb(107, 114, 128);
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+}
