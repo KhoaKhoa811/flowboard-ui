@@ -1,0 +1,26 @@
+<div class="item-board-container">
+    <div class="item-container">
+        <div class="item-count" [style.color]="'backlogs' | itemBoardColor">1</div>
+        <div class="item-name">Backlogs</div>
+    </div>
+
+    <div class="item-container">
+        <div class="item-count" [style.color]="'todo' | itemBoardColor">1</div>
+        <div class="item-name">To Do</div>
+    </div>
+
+    <div class="item-container">
+        <div class="item-count" [style.color]="'inprogress' | itemBoardColor">2</div>
+        <div class="item-name">In Progress</div>
+    </div>
+
+    <div class="item-container">
+        <div class="item-count" [style.color]="'done' | itemBoardColor">1</div>
+        <div class="item-name">Done</div>
+    </div>
+
+    <div class="item-container">
+        <div class="item-count" [style.color]="'cancelled' | itemBoardColor">1</div>
+        <div class="item-name">Cancelled</div>
+    </div>
+</div>
