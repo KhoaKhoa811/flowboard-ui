@@ -1,0 +1,72 @@
+.team-member-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    border-radius: 14px;
+    padding: 18px 24px;
+    border: 1.5px solid rgb(243, 244, 246);
+
+    .member-information-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .member-name {
+            font-weight: 600;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .member-mail {
+            font-size: 13px;
+            color: rgb(156, 163, 175);
+        }
+    }
+
+    .member-status-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .member-role {
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 6px;
+            padding: 3px 9px;
+            background: rgb(238, 242, 255);
+            color: rgb(99, 102, 241);
+        }
+
+        .member-task {
+            font-size: 12px;
+            color: rgb(156, 163, 175);
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .set-member-status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1.5px solid rgb(199, 210, 254);
+            background: rgb(238, 242, 255);
+            color: rgb(99, 102, 241);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+
+            mat-icon {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

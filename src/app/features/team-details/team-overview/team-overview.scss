@@ -72,4 +72,16 @@
             margin: 0;
         }
     }
+
+    .member-list-title {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    .team-member-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }

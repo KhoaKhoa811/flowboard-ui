@@ -1,0 +1,21 @@
+<div class="team-member-container">
+    <div class="member-information-container">
+        <app-default-avatar [name]="memberName" [size]="46" [fontSize]="16.56"></app-default-avatar>
+        <div class="member-information">
+            <h3 class="member-name">{{ memberName }}</h3>
+            <span class="member-mail">{{ memberMail }}</span>
+        </div>
+    </div>
+
+    <div class="member-status-container">
+        <span class="member-role">Admin</span>
+        <div class="member-task">
+            <span>2</span>
+            open task(s)
+        </div>
+        <button class="set-member-status">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+            <span>Make admin</span>
+        </button>
+    </div>
+</div>
