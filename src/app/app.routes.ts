@@ -23,6 +23,10 @@ export const routes: Routes = [
                 path: 'overview',
                 loadComponent: () => import('./features/team-details/team-overview/team-overview').then(m => m.TeamOverview)
             },
+            {
+                path: 'tasks',
+                loadComponent: () => import('./features/team-details/team-tasks/team-tasks').then(m => m.TeamTasks)
+            }
         ]
     }
 ];

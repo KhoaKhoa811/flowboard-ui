@@ -7,11 +7,11 @@
             <div class="team-detail-section">
                 <mat-icon>chevron_right</mat-icon>
                 <h2 class="team-title">Product Team</h2>
-                <button class="selected">Overview</button>
-                <button>Tasks</button>
-                <button>Board</button>
-                <button>Calendar</button>
-                <button>Discuss</button>
+                <button routerLinkActive="selected" [routerLink]="['/team-details', 'abczyx', 'overview']">Overview</button>
+                <button routerLinkActive="selected" [routerLink]="['/team-details', 'abczyx', 'tasks']">Tasks</button>
+                <button routerLinkActive="selected">Board</button>
+                <button routerLinkActive="selected">Calendar</button>
+                <button routerLinkActive="selected">Discuss</button>
             </div>
         }
     </div>
