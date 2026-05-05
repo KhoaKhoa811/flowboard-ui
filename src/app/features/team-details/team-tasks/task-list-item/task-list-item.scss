@@ -1,0 +1,96 @@
+.task-column {
+    padding: 18px 20px;
+    max-width: 400px;
+
+    p {
+        font-weight: 500;
+        font-size: 14px;
+        color: rgb(17, 24, 39);
+        text-decoration: none;
+        margin-bottom: 2px;
+        margin: 0;
+    }
+
+    span {
+        font-size: 13px;
+        color: rgb(156, 163, 175);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.status-column {
+    padding: 18px 20px;
+
+    .status-wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 9px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(217, 119, 6);
+        background: rgb(255, 251, 235);
+        border: 1px solid rgb(253, 230, 138);
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgb(217, 119, 6);
+            display: inline-block;
+        }
+    }
+}
+
+.priority-column {
+    padding: 18px 20px;
+    
+    .priority-wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 9px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(220, 38, 38);
+        background: rgb(254, 242, 242);
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: rgb(220, 38, 38);
+            display: inline-block;
+        }
+    }
+}
+
+.assignee-column {
+    padding: 18px 20px;
+    max-width: 200px;
+
+    .assignee-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .assignee-name {
+            font-size: 14px;
+            color: rgb(55, 65, 81);
+        }
+    }
+}
+
+.due-date-column {
+    padding: 18px 20px;
+
+    span {
+        font-size: 14px;
+        color: rgb(55, 65, 81);
+        font-weight: 400;
+    }
+}
