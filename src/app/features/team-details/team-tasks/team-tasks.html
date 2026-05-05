@@ -1,1 +1,40 @@
-<p>team-tasks works!</p>
+<div class="team-task-container">
+    <div class="task-filter-container">
+        <div class="task-search-container">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input type="text" placeholder="Search tasks..." class="search-input" />
+        </div>
+
+        <div class="task-status-filter-container">
+            <button 
+                [ngClass]="{'selected': filteredName() === 'all'}"
+                (click)="onChangeFilter('all')"
+            >All</button>
+            <button
+                [ngClass]="{'selected': filteredName() === 'backlog'}"
+                (click)="onChangeFilter('backlog')"
+            >Backlog</button>
+            <button
+                [ngClass]="{'selected': filteredName() === 'todo'}"
+                (click)="onChangeFilter('todo')"
+            >To Do</button>
+            <button
+                [ngClass]="{'selected': filteredName() === 'inprogress'}"
+                (click)="onChangeFilter('inprogress')"
+            >In Progress</button>
+            <button
+                [ngClass]="{'selected': filteredName() === 'done'}"
+                (click)="onChangeFilter('done')"
+            >Done</button>
+            <button
+                [ngClass]="{'selected': filteredName() === 'cancelled'}"
+                (click)="onChangeFilter('cancelled')"
+            >Cancelled</button>
+        </div>
+
+        <button class="add-button">
+            <mat-icon class="add-icon">add</mat-icon>
+            New Task
+        </button>
+    </div>
+</div>
