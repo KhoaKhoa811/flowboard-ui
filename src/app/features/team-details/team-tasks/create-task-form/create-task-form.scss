@@ -1,0 +1,74 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .text-danger {
+        color: rgb(239, 68, 68);
+        font-size: 12px;
+        margin-top: -10px;
+    }
+
+    .task-name-label,
+    .task-description-label,
+    .task-status-label,
+    .task-priority-label,
+    .task-assignee-label,
+    .task-due-date-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(107, 114, 128);
+        margin-bottom: 5px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .task-name-input {
+        width: 100%;
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: 1.5px solid rgb(229, 231, 235);
+        font-size: 13px;
+        outline: none;
+        background: rgb(250, 250, 250);
+        color: rgb(17, 24, 39);
+        box-sizing: border-box;
+    }
+
+    .task-description-input {
+        width: 100%;
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: 1.5px solid rgb(229, 231, 235);
+        font-size: 13px;
+        outline: none;
+        background: rgb(250, 250, 250);
+        color: rgb(17, 24, 39);
+        resize: vertical;
+        min-height: 72px;
+        box-sizing: border-box;
+    }
+
+    .task-information-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        .task-status-input,
+        .task-priority-input,
+        .task-assignee-input,
+        .task-due-date-input {
+            width: 100%;
+            padding: 9px 12px;
+            border-radius: 8px;
+            border: 1.5px solid rgb(229, 231, 235);
+            font-size: 13px;
+            outline: none;
+            background: rgb(250, 250, 250);
+            color: rgb(17, 24, 39);
+            box-sizing: border-box;
+        }
+    }
+}
+

@@ -32,11 +32,21 @@
             >Cancelled</button>
         </div>
 
-        <button class="add-button">
+        <button class="add-button" (click)="onToggleDialog()">
             <mat-icon class="add-icon">add</mat-icon>
             New Task
         </button>
     </div>
+
+    <app-shared-dialog
+        [title]="'Create New Task'"
+        [submitName]="'Create Task'"
+        [dialogWidth]="'520px'"
+        [(toggle)]="toggleDialog"
+        (onCancel)="createTaskForm.cancelTaskForm()"
+    >
+        <app-create-task-form #createTaskForm></app-create-task-form>
+    </app-shared-dialog>
 
     <div class="team-task-list-container">
         <table class="team-task-list">

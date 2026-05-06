@@ -1,0 +1,68 @@
+<form action="" class="task-form" [formGroup]="taskForm">
+    <div class="task-name-container">
+        <label for="task-name" class="task-name-label">Task Name *</label>
+        <input type="text" formControlName="taskName" id="task-name" name="task-name" class="task-name-input" placeholder="Enter task name...">
+        <small *ngIf="taskForm.get('taskName')?.invalid && taskForm.get('taskName')?.touched" class="text-danger">
+            Invalid task name
+        </small>
+    </div>
+
+    <div class="task-description-container">
+        <label for="task-description" class="task-description-label">Task Description</label>
+        <textarea name="task-description" formControlName="taskDescription" id="task-description" class="task-description-input" placeholder="Enter task description..."></textarea>
+        <small *ngIf="taskForm.get('taskDescription')?.invalid && taskForm.get('taskDescription')?.touched" class="text-danger">
+            Invalid task description
+        </small>
+    </div>
+
+    <div class="task-information-grid">
+        <div class="task-status-container">
+            <label for="task-status" class="task-status-label">Status</label>
+            <select name="task-status" formControlName="taskStatus" id="task-status" class="task-status-input">
+                <option value="" disabled selected>Select status</option>
+                <option value="backlog">Backlog</option>
+                <option value="todo">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+            <small *ngIf="taskForm.get('taskStatus')?.invalid && taskForm.get('taskStatus')?.touched" class="text-danger">
+                Invalid task status
+            </small>
+        </div>
+
+        <div class="task-priority-container">
+            <label for="task-priority" class="task-priority-label">Priority</label>
+            <select name="task-priority" formControlName="taskPriority" id="task-priority" class="task-priority-input">
+                <option value="" disabled selected>Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <small *ngIf="taskForm.get('taskPriority')?.invalid && taskForm.get('taskPriority')?.touched" class="text-danger">
+                Invalid task priority
+            </small>
+        </div>
+
+        <div class="task-assignee-container">
+            <label for="task-assignee" class="task-assignee-label">Assignee</label>
+            <select name="task-assignee" formControlName="taskAssignee" id="task-assignee" class="task-assignee-input">
+                <option value="" disabled selected>Select assignee</option>
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+            </select>
+            <small *ngIf="taskForm.get('taskAssignee')?.invalid && taskForm.get('taskAssignee')?.touched" class="text-danger">
+                Invalid task assignee
+            </small>
+        </div>
+
+        <div class="task-due-date-container">
+            <label for="task-due-date" class="task-due-date-label">Due Date</label>
+            <input type="date" formControlName="taskDueDate" id="task-due-date" name="task-due-date" class="task-due-date-input">
+            <small *ngIf="taskForm.get('taskDueDate')?.invalid && taskForm.get('taskDueDate')?.touched" class="text-danger">
+                Invalid task due date
+            </small>
+        </div>
+    </div>
+</form>
