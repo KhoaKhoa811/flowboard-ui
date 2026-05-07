@@ -1,1 +1,123 @@
-<p>kanban-board works!</p>
+<div class="kanban-board-container">
+    <div class="kanban-board-header">
+        <h3>Drag cards to change status</h3>
+
+        <button class="add-button" (click)="openCreateTaskDialog()">
+            <mat-icon class="add-icon">add</mat-icon>
+            New Task
+        </button>
+    </div>
+
+    <app-shared-dialog
+        [title]="'Create New Task'"
+        [submitName]="'Create Task'"
+        [dialogWidth]="'520px'"
+        [(toggle)]="toggleDialog"
+        (onCancel)="createTaskForm.cancelTaskForm()"
+    >
+        <app-create-task-form #createTaskForm></app-create-task-form>
+    </app-shared-dialog>
+
+    <div class="kanban-wrapper" cdkDropListGroup>
+        <div class="column" 
+            [style.background-color]="'rgb(243, 244, 246)'"
+            [style.border]="'2px solid rgb(229, 231, 235)'"
+        >
+            <div class="kanban-header-container">
+                <div class="kanban-title-container">
+                    <span class="dot"></span>
+                    <span>Backlog</span>
+                </div>
+            </div>
+            <div
+                cdkDropList
+                [cdkDropListData]="backlog"
+                (cdkDropListDropped)="drop($event)"
+                class="list"
+            >
+            <div class="item" cdkDrag>abc</div>
+            </div>
+        </div>
+
+        <div class="column" 
+            [style.background-color]="' rgb(238, 242, 255)'"
+            [style.border]="'2px solid rgb(199, 210, 254)'"
+        >
+            <div class="kanban-header-container">
+                <div class="kanban-title-container">
+                    <span class="dot"></span>
+                    <span>To Do</span>
+                </div>
+            </div>
+            <div
+                cdkDropList
+                [cdkDropListData]="todo"
+                (cdkDropListDropped)="drop($event)"
+                class="list"
+            >
+            <div class="item" cdkDrag>xyz</div>
+            </div>
+        </div>
+
+        <div class="column" 
+            [style.background-color]="'rgb(255, 251, 235)'"
+            [style.border]="'2px solid rgb(253, 230, 138)'"
+        >
+            <div class="kanban-header-container">
+                <div class="kanban-title-container">
+                    <span class="dot"></span>
+                    <span>In Progress</span>
+                </div>
+            </div>
+            <div
+                cdkDropList
+                [cdkDropListData]="inProgress"
+                (cdkDropListDropped)="drop($event)"
+                class="list"
+            >
+            <div class="item" cdkDrag>abc</div>
+            </div>
+        </div>
+
+        <div class="column" 
+            [style.background-color]="'rgb(236, 253, 245)'"
+            [style.border]="'2px solid rgb(167, 243, 208)'"
+        >
+            <div class="kanban-header-container">
+                <div class="kanban-title-container">
+                    <span class="dot"></span>
+                    <span>Done</span>
+                </div>
+            </div>
+            <div
+                cdkDropList
+                [cdkDropListData]="done"
+                (cdkDropListDropped)="drop($event)"
+                class="list"
+            >
+            <div class="item" cdkDrag>xyz</div>
+            </div>
+        </div>
+
+        <div class="column" 
+            [style.background-color]="'rgb(249, 250, 251)'"
+            [style.border]="'2px solid rgb(229, 231, 235)'"
+        >
+            <div class="kanban-header-container">
+                <div class="kanban-title-container">
+                    <span class="dot"></span>
+                    <span>Cancelled</span>
+                </div>
+            </div>
+            <div
+                cdkDropList
+                [cdkDropListData]="cancelled"
+                (cdkDropListDropped)="drop($event)"
+                class="list"
+            >
+            <div class="item" cdkDrag>abc</div>
+            </div>
+        </div>
+
+    </div>
+</div>
